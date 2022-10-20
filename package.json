@@ -5,8 +5,6 @@
   "scripts": {
     "prod": "rm -rf ./dist && node ./scripts/build.js -P",
     "dev": "rm -rf ./dist && node ./scripts/build.js -D",
-    "gulp:dev": "gulp serve",
-    "gulp:prod": "gulp build",
     "create-page": "node ./scripts/createPage.js"
   },
   "browserslist": [
