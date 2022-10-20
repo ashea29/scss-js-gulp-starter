@@ -1,0 +1,27 @@
+{
+  "name": "scss-vanillajs-starter",
+  "version": "1.0.0",
+  "description": "SCSS Vanilla JS Starter",
+  "scripts": {
+    "build": "rm -rf ./dist && node ./scripts/build.js -P",
+    "dev": "rm -rf ./dist && node ./scripts/build.js -D",
+    "create-page": "node ./scripts/createPage.js"
+  },
+  "author": "Andrew Shea",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "@minify-html/node": "latest",
+    "chalk": "^5.1.2",
+    "commander": "latest",
+    "concurrently": "latest",
+    "inquirer": "^9.1.3",
+    "live-server": "latest",
+    "nodemon": "latest",
+    "sass": "latest",
+    "strip-indent": "^4.0.0",
+    "uglify-js": "latest"
+  },
+  "devDependencies": {
+    "chokidar": "^3.5.3"
+  }
+}

@@ -1,0 +1,5 @@
+// Global imports
+@forward '../../abstracts/config' show mediaCustomRange, $default-font, $primary-color;
+
+// Local imports
+@forward './config';

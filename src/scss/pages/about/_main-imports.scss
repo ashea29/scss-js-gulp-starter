@@ -1,0 +1,5 @@
+// Global imports
+@forward '../../abstracts/config' show $primary-color;
+
+// Local imports
+@forward './config';
