@@ -1,0 +1,8 @@
+@use './abstracts' as *;
+
+
+@include importFonts;
+@include globalStyles--main;
+@include globalStyles--utility;
+@include globalStyles--layout;
+@include globalStyles--responsive;
