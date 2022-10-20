@@ -1,14 +1,13 @@
 const path = require("path");
 const { readFileSync, readdirSync } = require("node:fs");
 const { platform } = require("os");
-const { rootDir, jsPath, htmlPath, scssPath, cssPath } = require('../paths')
+const { rootDir, jsPath, htmlPath, scssPath } = require('../paths')
 const { findFiles, outputFiles } = require('..')
 
 const OS = platform()
 
-const cssOutputArray = []
 
-const outputHTMLandJS = (cssArray) => {
+const outputHTMLandJS = () => {
   const htmlFilesArray = [];
   const htmlOutputArray = [];
   const jsEntriesArray = [];
@@ -39,29 +38,9 @@ const outputHTMLandJS = (cssArray) => {
     const globalCSSLink = '\t<link rel="stylesheet" href="css/globalStyles.css">'
 
     if (matchingPageStyle && matchingPageStyle.isDirectory()) {
-      cssArray.push(
-        `${
-          path.resolve(scssPath, "pages", matchingPageStyle.name)
-        }${
-          OS === "win32" ? "\\" : "/"
-        }index.scss:${
-          path.resolve(cssPath, `${matchingPageStyle.name}`)
-        }${
-          OS === "win32" ? "\\" : "/"
-        }index.css`.trim()
-      )
-
       mainCSSLink = `\t<link rel="stylesheet" href="css/${file.name === "index" ? "home" : file.name}/index.css">`
     } else if (matchingPageStyle && !matchingPageStyle.isDirectory()) {
       fileExtension = path.extname(matchingPageStyle.name)
-
-      cssArray.push(
-        `${
-         path.resolve(scssPath, "pages", `${matchingPageStyle.name.substring(0, matchingPageStyle.name.indexOf(fileExtension))}.scss` ) 
-        }:${
-          path.resolve(cssPath, `${matchingPageStyle.name.substring(0, matchingPageStyle.name.indexOf(fileExtension))}.css`) 
-        }`.trim()
-      )
 
       mainCSSLink = `\t<link rel="stylesheet" href="css/${matchingPageStyle.name.substring(0, matchingPageStyle.name.indexOf(fileExtension))}.css">`
     }
@@ -140,8 +119,4 @@ const outputHTMLandJS = (cssArray) => {
   }
 };
 
-outputHTMLandJS(cssOutputArray)
-
-module.exports = {
-  cssOutputArray
-}
+outputHTMLandJS()
