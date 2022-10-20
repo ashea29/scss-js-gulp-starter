@@ -15,11 +15,11 @@ const build = program.opts();
 
 if (build.dev) {
   concurrently([
-    'nodemon ./scripts/utils/dev/outputHTMLandJS.js', 'yarn gulp:dev --dev', 'node ./scripts/dev.js'
+    'nodemon ./scripts/utils/dev/outputHTMLandJS.js', 'gulp --dev', 'node ./scripts/dev.js'
   ])
 }
 
 if (build.prod) {
   outputHTMLandJS();
-  execSync('yarn gulp:prod --prod');
+  execSync('gulp --prod');
 }
