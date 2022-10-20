@@ -19,7 +19,7 @@ if (args.indexOf('--prod') !== -1) {
   joinCharacter = ""
 }
 
-gulp.task('css', function () {
+gulp.task('generateCSS', function () {
   const plugins = [
     require('postcss-import'),
     require('autoprefixer')(),
@@ -52,8 +52,8 @@ gulp.task('modifyGlobalCSS', function (done) {
   done()
 })
 
-gulp.task('serve', gulp.series('css', 'modifyGlobalCSS', function () {
-  gulp.watch(['./src/scss/*.scss', './src/scss/pages/**/*.scss'], gulp.series('css', 'modifyGlobalCSS'))
+gulp.task('serve', gulp.series('generateCSS', 'modifyGlobalCSS', function () {
+  gulp.watch(['./src/scss/*.scss', './src/scss/pages/**/*.scss'], gulp.series('generateCSS', 'modifyGlobalCSS'))
 }))
 
-gulp.task('build', gulp.series('css', 'modifyGlobalCSS'))
+gulp.task('build', gulp.series('generateCSS', 'modifyGlobalCSS'))
