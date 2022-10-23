@@ -130,16 +130,26 @@ const generateFiles = (options, answers, pageTemplate, scssIndexTemplate) => {
   }
 
   scssFilesToGenerate.forEach((file) => {
-    if (file.name !== 'index') {
-      writeFileSync(
-        `${newModulePath}${OS === "win32" ? "\\" : "/"}${file.name}${file.ext}`,
-        '',
-        {}
-      )
-    } else if (file.name === 'index') {
+    if (file.name === 'index') {
       writeFileSync(
         `${newModulePath}${OS === "win32" ? "\\" : "/"}${file.name}${file.ext}`,
         scssIndexTemplate,
+        {}
+      )
+    } else if (file.name === '_main') {
+      writeFileSync(
+        `${newModulePath}${OS === "win32" ? "\\" : "/"}${file.name}${file.ext}`,
+        "@use './main-imports' as *;"
+      )
+    } else if (file.name === '_responsive') {
+      writeFileSync(
+        `${newModulePath}${OS === "win32" ? "\\" : "/"}${file.name}${file.ext}`,
+        "@use './responsive-imports' as *;"
+      )
+    } else {
+      writeFileSync(
+        `${newModulePath}${OS === "win32" ? "\\" : "/"}${file.name}${file.ext}`,
+        '',
         {}
       )
     }
