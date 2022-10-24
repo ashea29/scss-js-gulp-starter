@@ -20,8 +20,10 @@ program
   .option("-J, --javascript", "Create JS file for page");  
 
 const moduleNameIndex = args.findIndex(
-  (arg) => !arg.includes('--') 
-    && arg !== '-F' 
+  (arg) => 
+       arg !== '--favicon' 
+    && arg !== '--javascript' 
+    && arg !== '-F'
     && arg !== '-J'
 )
 
