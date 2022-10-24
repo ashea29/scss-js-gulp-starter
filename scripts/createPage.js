@@ -21,15 +21,14 @@ program
 
 const moduleNameIndex = args.findIndex(
   (arg) => !arg.includes('--') 
-    && !arg.includes('-F') 
-    && !arg.includes('-J')
+    && arg !== '-F' 
+    && arg !== '-J'
 )
 
 const moduleName = args[moduleNameIndex]
 
 program.parse(argv);
 const options = program.opts()
-
 
 let inquirer
 let chalk
