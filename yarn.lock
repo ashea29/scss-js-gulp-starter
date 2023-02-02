@@ -2470,10 +2470,10 @@ onetime@^5.1.0:
   dependencies:
     mimic-fn "^2.1.0"
 
-open-props@^1.4.16:
-  version "1.4.16"
-  resolved "https://registry.yarnpkg.com/open-props/-/open-props-1.4.16.tgz#dfab38fbbcd7b4a979dffb76bfb618b635554d49"
-  integrity sha512-kPIgGYjan1aKl3Vp1pG9V5TgH7CTaDWm3ndllTgr5gBQ3tu+F11dZKpZiP1+o/aCSCx8WMo15ARsFYxCAJXxHg==
+open-props@^1.5.3:
+  version "1.5.5"
+  resolved "https://registry.yarnpkg.com/open-props/-/open-props-1.5.5.tgz#74bf087ea85b26f93cb15da0e49966172c4d836f"
+  integrity sha512-MiNn+fZFcdEn8OcgHMqcCa3m41XiIL5yiPW/j4+ozPrk7SGEvlQsr5J2qE2Jp/sHSOpuVapcCBCFx11fE5pZUA==
 
 opn@latest:
   version "6.0.0"
