@@ -14,7 +14,7 @@
   "license": "GPL-3.0",
   "dependencies": {
     "@csstools/postcss-sass": "^5.0.1",
-    "@minify-html/node": "latest",
+    "@minify-html/node": "0.10.7",
     "autoprefixer": "^10.4.12",
     "chalk": "^5.1.2",
     "commander": "latest",
