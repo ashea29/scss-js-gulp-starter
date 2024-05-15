@@ -19,7 +19,7 @@
     "chalk": "^5.2.0",
     "commander": "latest",
     "concurrently": "7.6.0",
-    "gulp": "^4.0.2",
+    "gulp": "^5.0.0",
     "gulp-postcss": "^9.0.1",
     "gulp-sass": "^5.1.0",
     "inquirer": "^9.1.3",
