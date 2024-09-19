@@ -33,7 +33,7 @@
     "postcss-jit-props": "^1.0.9",
     "postcss-preset-env": "^7.8.2",
     "postcss-scss": "^4.0.5",
-    "sass": "^1.57.1",
+    "sass": "^1.79.0",
     "strip-indent": "^4.0.0",
     "uglify-js": "3.17.4"
   },
