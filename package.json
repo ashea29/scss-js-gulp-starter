@@ -15,7 +15,7 @@
   "dependencies": {
     "@csstools/postcss-sass": "^5.0.1",
     "@minify-html/node": "0.10.7",
-    "autoprefixer": "^10.4.12",
+    "autoprefixer": "^10.4.13",
     "chalk": "^5.2.0",
     "commander": "latest",
     "concurrently": "7.6.0",
